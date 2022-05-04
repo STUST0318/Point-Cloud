@@ -1,6 +1,6 @@
 # Point-Cloud
 ## 功能:
-讀取pcd檔案並顯示在QVTKWidget上、
+讀取pcd、txt檔案並顯示在QVTKWidget上、
 使用QSlider更改點雲顏色與大小、
 開啟txt檔
 
