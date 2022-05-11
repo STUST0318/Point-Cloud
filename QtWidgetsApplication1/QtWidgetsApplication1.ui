@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>907</width>
-    <height>629</height>
+    <height>637</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>10</y>
       <width>245</width>
       <height>475</height>
      </rect>
@@ -349,17 +349,23 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QPushButton" name="openFileBtn">
+   <widget class="QCheckBox" name="coordinateChkBox">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>93</width>
-      <height>28</height>
+      <x>20</x>
+      <y>490</y>
+      <width>121</width>
+      <height>19</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>OpenFile</string>
+     <string>Coordinate</string>
     </property>
    </widget>
   </widget>
@@ -372,6 +378,24 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>檔案</string>
+    </property>
+    <addaction name="openAction"/>
+    <addaction name="separator"/>
+    <addaction name="saveAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>色彩</string>
+    </property>
+    <addaction name="PointColorAction"/>
+    <addaction name="separator"/>
+    <addaction name="BackgroundColorAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -382,6 +406,26 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="openAction">
+   <property name="text">
+    <string>開啟檔案</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="text">
+    <string>儲存檔案</string>
+   </property>
+  </action>
+  <action name="PointColorAction">
+   <property name="text">
+    <string>點雲</string>
+   </property>
+  </action>
+  <action name="BackgroundColorAction">
+   <property name="text">
+    <string>背景</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -395,22 +439,6 @@
   <include location="QtWidgetsApplication1.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>openFileBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>QtWidgetsApplication1Class</receiver>
-   <slot>openFile()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>46</x>
-     <y>62</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>455</x>
-     <y>318</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>rSlider</sender>
    <signal>valueChanged(int)</signal>
@@ -475,6 +503,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>openAction</sender>
+   <signal>triggered()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>openFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>314</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>coordinateChkBox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>coordinateChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>538</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openFile()</slot>
@@ -482,5 +542,6 @@
   <slot>gSliderChanged()</slot>
   <slot>bSliderChanged()</slot>
   <slot>pSliderChanged()</slot>
+  <slot>coordinateChange(int)</slot>
  </slots>
 </ui>

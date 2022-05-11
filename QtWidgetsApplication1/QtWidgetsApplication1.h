@@ -41,6 +41,7 @@ private:
 	void initialvtk();
 
 	static void pp_callback(const pcl::visualization::PointPickingEvent& event, void* args);
+	static void pp_callback(const pcl::visualization::AreaPickingEvent& event, void* args);
 	pcl::PointCloud<pcl::PointXYZRGB>::Ptr clicked_points_3d;
 
 private slots:
@@ -49,4 +50,7 @@ private slots:
 	void gSliderChanged();
 	void bSliderChanged();
 	void pSliderChanged();
+	void PointColorChange();
+	void BackgroundColorchagne();
+	void coordinateChange(int value);
 };
