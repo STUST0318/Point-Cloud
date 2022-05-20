@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>907</width>
-    <height>637</height>
+    <width>1123</width>
+    <height>809</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QVTKWidget" name="qvtkWidget">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>260</x>
       <y>10</y>
-      <width>651</width>
-      <height>551</height>
+      <width>851</width>
+      <height>561</height>
      </rect>
     </property>
    </widget>
@@ -368,14 +368,55 @@
      <string>Coordinate</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="consoleTable">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>580</y>
+      <width>1121</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>210</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Time</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Operation</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Operation Object</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Details</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Note</string>
+     </property>
+    </column>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>907</width>
-     <height>25</height>
+     <width>1123</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -543,5 +584,6 @@
   <slot>bSliderChanged()</slot>
   <slot>pSliderChanged()</slot>
   <slot>coordinateChange(int)</slot>
+  <slot>colorBtn()</slot>
  </slots>
 </ui>

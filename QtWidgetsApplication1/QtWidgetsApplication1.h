@@ -36,7 +36,7 @@ private:
 	//定義點雲指標
 	pcl::PointCloud<pcl::PointXYZRGB>::Ptr pointptr;
 	//定義顯示器
-	boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer;;
+	boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer;
 	//初始化vtk
 	void initialvtk();
 
@@ -53,4 +53,5 @@ private slots:
 	void PointColorChange();
 	void BackgroundColorchagne();
 	void coordinateChange(int value);
+	void consoleLog(QString operation, QString subname, QString filename, QString note);
 };
