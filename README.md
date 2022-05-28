@@ -40,7 +40,9 @@
 		
       ```
    -------------------
-   此段為利用2D圖片轉為point cloud 之pcd文件
+   ### 此段為利用2D圖片轉為point cloud 之pcd文件
+   ### rgb為一般有彩色圖片即可
+   ### depth為深度圖需要有深度攝像頭功能
    
      ```
     	// 按下 q 鍵離開迴圈並回傳mypicture
@@ -90,6 +92,11 @@
    * 攝像頭的內參(像素質、聚焦、光學中心)不知道如何取得
    * 目前顯示會有色彩消失問題
     
-   ![](https://github.com/tim60936/QtWidgetsApplication1/blob/master/%E5%9C%96%E7%89%871.png)
-  
-  
+    
+##展示:
+### 擁有深度圖之pcd展示
+   ![](https://github.com/tim60936/QtWidgetsApplication1/blob/master/good.png)
+### 彩色圖以及利用灰階模擬深度圖
+ ![](https://github.com/tim60936/QtWidgetsApplication1/blob/master/picther.png)
+### 無深度圖之pcd展示
+![](https://github.com/tim60936/QtWidgetsApplication1/blob/master/3.png)
